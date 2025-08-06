@@ -1,0 +1,303 @@
+$negro: #000;
+$blanco: #ffffff;
+$grisClaro: #ccc;
+$grisOscuro: #4a4a4a;
+$fuente: "Roboto", "Helvetica Neue", Arial, sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fuente;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+  text-transform: uppercase;
+  background-color: $grisOscuro;
+
+  .titulo {
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: $blanco;
+    }
+  }
+
+  nav {
+    a {
+      font-size: 1.2rem;
+      margin: 0;
+      text-align: center;
+      padding: 0 0.5rem;
+      text-decoration: none;
+      color: $blanco;
+    }
+  }
+}
+
+footer {
+  background-color: $grisOscuro;
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    p {
+      color: $grisClaro;
+    }
+
+    nav {
+      a {
+        color: $blanco;
+        text-decoration: none;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .contador {
+    h1 {
+      font-size: 10rem;
+    }
+  }
+  .controles {
+    padding: 2rem 0.5rem;
+    .boton {
+      font-size: 2rem;
+      text-transform: uppercase;
+      border-radius: 2rem;
+      border: none;
+      padding: 2rem;
+      margin: 0 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .anadir {
+      background-color: lightgreen;
+      &:hover {
+        background-color: rgb(52, 247, 52);
+      }
+    }
+
+    .eliminar {
+      background-color: lightcoral;
+      &:hover {
+        background-color: rgb(245, 64, 64);
+      }
+    }
+
+    .reiniciar {
+      background-color: lightsalmon;
+      &:hover {
+        background-color: rgb(245, 107, 52);
+      }
+    }
+  }
+
+  .nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    padding: 0 4rem;
+
+    .imagenNosotros {
+      padding: 2rem;
+      height: 100%;
+      width: 100%;
+      img {
+        width: 95%;
+        height: 95%;
+      }
+    }
+    .infoNosotros {
+      padding: 2rem;
+
+      p,
+      h1 {
+        height: auto;
+        width: auto;
+      }
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .formulario {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 2rem 0 1.3rem 0;
+    }
+    .cuadro {
+      padding: 0.7rem;
+      border: 1px solid $grisClaro;
+      width: 50%;
+    }
+    .descripcion {
+      height: 10rem;
+      resize: none;
+    }
+
+    .submit {
+      text-align: center;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      margin: 1rem 0;
+      background-color: $grisOscuro;
+      color: $blanco;
+
+      &:hover {
+        background-color: $negro;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .politicas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .titulo {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    h2 {
+      width: 90%;
+      color: $negro;
+    }
+    p {
+      color: $grisOscuro;
+      width: 60%;
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2rem;
+
+      a {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  main {
+    .contador {
+      h1 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .controles {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .boton {
+        width: 15rem;
+        margin: 1rem 0;
+      }
+    }
+
+    .nosotros {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 3.2rem;
+
+      .infoNosotros {
+        padding: 1rem 0;
+      }
+      .imagenNosotros {
+        padding: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  footer {
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        a {
+          padding: 0.5rem 0;
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+  text-transform: uppercase;
+  background-color: #4a4a4a;
+}
+header .titulo a {
+  text-decoration: none;
+}
+header .titulo h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ffffff;
+}
+header nav a {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #4a4a4a;
+}
+footer .contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+footer .contenedor p {
+  color: #ccc;
+}
+footer .contenedor nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .contador h1 {
+  font-size: 10rem;
+}
+main .controles {
+  padding: 2rem 0.5rem;
+}
+main .controles .boton {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  border: none;
+  padding: 2rem;
+  margin: 0 1rem;
+}
+main .controles .boton:hover {
+  cursor: pointer;
+}
+main .controles .anadir {
+  background-color: lightgreen;
+}
+main .controles .anadir:hover {
+  background-color: rgb(52, 247, 52);
+}
+main .controles .eliminar {
+  background-color: lightcoral;
+}
+main .controles .eliminar:hover {
+  background-color: rgb(245, 64, 64);
+}
+main .controles .reiniciar {
+  background-color: lightsalmon;
+}
+main .controles .reiniciar:hover {
+  background-color: rgb(245, 107, 52);
+}
+main .nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+  padding: 0 4rem;
+}
+main .nosotros .imagenNosotros {
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+main .nosotros .imagenNosotros img {
+  width: 95%;
+  height: 95%;
+}
+main .nosotros .infoNosotros {
+  padding: 2rem;
+}
+main .nosotros .infoNosotros p,
+main .nosotros .infoNosotros h1 {
+  height: auto;
+  width: auto;
+}
+main .nosotros .infoNosotros h1 {
+  text-align: center;
+}
+main .reverse {
+  flex-direction: row-reverse;
+}
+main .formulario {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+main .formulario form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+main .formulario h2 {
+  margin: 0;
+  padding: 2rem 0 1.3rem 0;
+}
+main .formulario .cuadro {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+main .formulario .descripcion {
+  height: 10rem;
+  resize: none;
+}
+main .formulario .submit {
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin: 1rem 0;
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+main .formulario .submit:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+main .politicas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+main .politicas .titulo {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+main .politicas h2 {
+  width: 90%;
+  color: #000;
+}
+main .politicas p {
+  color: #4a4a4a;
+  width: 60%;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  header nav a {
+    padding: 0.5rem 0;
+  }
+  main .contador h1 {
+    margin-bottom: 0.5rem;
+  }
+  main .controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .controles .boton {
+    width: 15rem;
+    margin: 1rem 0;
+  }
+  main .nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3.2rem;
+  }
+  main .nosotros .infoNosotros {
+    padding: 1rem 0;
+  }
+  main .nosotros .imagenNosotros {
+    padding: 0;
+    margin-top: 2rem;
+  }
+  footer .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contenedor nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contenedor nav a {
+    padding: 0.5rem 0;
+  }
+  footer .contenedor p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
